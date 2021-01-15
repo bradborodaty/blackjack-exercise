@@ -77,8 +77,8 @@ const BlackJackHand = () => {
             )}
             <div className={styles.ScoreContainer}>
                 <div className={styles.Score}>
-                    {state.player.score}
-                    <span></span>
+                    <div>{state.player.score}</div>
+                    <div></div>
                 </div>
             </div>
             <div className={styles.Cards}>
