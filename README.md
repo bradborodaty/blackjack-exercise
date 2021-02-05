@@ -1,6 +1,6 @@
 ## Project Description
 
-You will be provided with the desktop version of a single player blackjack app. Your job will be to expand the current functionality to support a player and a dealer. You will also add a scoreboard that tracks wins, losses, and pushes. A mockup of the final version is provider [here](/assets/blackjack_spec.png)
+The current state of this repo is the desktop version of a single player blackjack app. Your job will be to expand the current functionality to support a player and a dealer. You will also add a scoreboard that tracks wins, losses, and pushes. A mockup of the final version is provider [here](/assets/blackjack_spec.png)
 
 -   Do not spend more than 4 hours, if you do not complete everything, just note it and be prepared to discuss it.
 -   There are no intentionally hidden bugs or tricks. Don’t waste time trying to find them.
