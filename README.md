@@ -1,4 +1,7 @@
-## Project Description
+## Exercise Purpose
+The purpose of this exercise is to create a conversation piece for your next interview.
+
+## Exercise Description
 
 The current state of this repo is the desktop version of a single player blackjack app. Your job will be to expand the current functionality to support a player and a dealer. You will also add a scoreboard that tracks wins, losses, and pushes. A mockup of the final version is provider [here](/assets/blackjack_spec.png)
 
@@ -80,6 +83,12 @@ Once the player hand is finished, it's the dealer's turn. The dealer hand will n
 - invite our github user "fl-codereview" to be a collaborator on the repository
 - create a pull request against your Github repository
 - let us(your interview coordinator) know when you are ready to review
+
+## Followup Interview Prep
+* Be prepared to walk us through your work and explain your decisions as if you were doing a code review.
+* We want to hear you be very verbose about your process and the decisions you made along the way. 
+* Additionally, we will dive into your current responsibilities and have you explain what you are looking for in your next position.
+
 
 ## How To Run
 
