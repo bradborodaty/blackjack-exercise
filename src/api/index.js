@@ -6,4 +6,13 @@ const getScore = () => {
     });
 };
 
-export { getScore };
+const updateScore = (winner) => {
+    return axios.post('/api/score', {
+        result: winner
+    }).then(res => {
+        console.log(res);
+        return res.data;
+    });
+}
+
+export { getScore, updateScore };

@@ -1,5 +1,4 @@
-import React, { useReducer } from 'react';
-
+import React, { useReducer, useEffect, useState } from 'react';
 import { PlayingCard } from '../PlayingCard/PlayingCard';
 import { WinnerBanner } from '../WinnerBanner/WinnerBanner';
 import { Button } from '../shared/Button/Button';
@@ -45,6 +44,7 @@ function calculateWinner(state) {
         }
 
         state.winner = BlackJack.calculateWinner(state.player, state.dealer);
+        console.log(state.winner);
     }
 }
 
@@ -65,8 +65,15 @@ function reducer(state, action) {
     }
 }
 
-const BlackJackHand = () => {
+const BlackJackHand = (props) => {
     const [state, dispatch] = useReducer(reducer, {}, init);
+
+    useEffect(() => {
+        console.log(state.winner);
+        if(state.winner) {
+            props.postScore(state.winner);
+        }
+    }, [state.winner]);
 
     return (
         <div className={styles.Container}>
