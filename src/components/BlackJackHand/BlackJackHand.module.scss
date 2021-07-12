@@ -10,7 +10,7 @@
     display: block;
 }
 
-.ContainerHand {
+.ContainerHand, .ContainerHandMobile {
     display: flex;
     justify-content: left;
 }
@@ -97,4 +97,31 @@
 
 .StayButton {
     background-color: #ea8441;
+}
+
+.PlayerHandContainer {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .Container {
+        padding: 32px 0 0 40px;
+        justify-content: unset;
+    }
+
+    .HandSpacer {
+        height: 80px;
+    }
+
+    .ContainerHandMobile {
+        flex-direction: column;
+    }
+
+    .MenuContainer {
+        margin-top: 32px;
+    }
+
+    .PlayerTitle {
+        top: -10px;
+    }
 }

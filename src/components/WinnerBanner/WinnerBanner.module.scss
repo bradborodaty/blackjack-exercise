@@ -16,3 +16,9 @@
     border-color: #000000;
     color: #000000;
 }
+
+@media (max-width: 768px) {
+    .Container {
+        width: 320px;
+    }
+}
