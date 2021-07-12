@@ -65,6 +65,21 @@ function reducer(state, action) {
     }
 }
 
+function getDealerScoreOnDeal(card) {
+    switch(card) {
+        case 'Jack':
+            return '10';
+        case 'Queen': 
+            return '10';
+        case 'King':
+            return '10';
+        case 'Ace':
+            return '11';
+        default:
+            return card;
+    }
+}
+
 const BlackJackHand = (props) => {
     const [state, dispatch] = useReducer(reducer, {}, init);
     console.log(state);
@@ -88,7 +103,7 @@ const BlackJackHand = (props) => {
                 <div className={styles.ContainerHand}>
                     <div className={styles.ScoreContainer}>
                         <div className={styles.Score}>
-                            <div>{state.dealer.score}</div>
+                            <div>{!state.player.isFinished ? getDealerScoreOnDeal(state.dealer.cards[1].rank) : state.dealer.score}</div>
                             <div></div>
                         </div>
                     </div>
