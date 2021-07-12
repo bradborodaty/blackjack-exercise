@@ -67,6 +67,7 @@ function reducer(state, action) {
 
 const BlackJackHand = (props) => {
     const [state, dispatch] = useReducer(reducer, {}, init);
+    console.log(state);
 
     useEffect(() => {
         console.log(state.winner);
@@ -82,6 +83,31 @@ const BlackJackHand = (props) => {
                     <WinnerBanner winner={state.winner} onNewHandClick={() => dispatch(newGame())}></WinnerBanner>
                 </div>
             )}
+            {/* dealer */}
+            <div className={styles.ScoreContainer}>
+                <div className={styles.Score}>
+                    <div>{state.dealer.score}</div>
+                    <div></div>
+                </div>
+            </div>
+            <div className={styles.Cards}>
+                {state.dealer.cards.map((card, index) => {
+                    if(index === 0 && !state.player.isFinished) {
+                        return (
+                            <div key={card.code} className={styles.Card}>
+                                <PlayingCard card={card} faceUp={false} />
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div key={card.code} className={styles.Card}>
+                                <PlayingCard card={card} />
+                            </div>
+                        )
+                    }
+                })}
+            </div>
+            {/* player */}
             <div className={styles.ScoreContainer}>
                 <div className={styles.Score}>
                     <div>{state.player.score}</div>
