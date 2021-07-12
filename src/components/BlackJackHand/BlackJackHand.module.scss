@@ -1,9 +1,32 @@
 .Container {
     position: relative;
-    display: flex;
     justify-content: center;
     background-color: #2f6f26;
     padding: 64px 48px;
+    display: flex;
+}
+
+.WrapperHand {
+    display: block;
+}
+
+.ContainerHand {
+    display: flex;
+    justify-content: left;
+}
+
+.HandSpacer {
+    height: 120px;
+}
+
+.PlayerTitle {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    top: 45px;
+    left: 38%;
 }
 
 .ScoreContainer {
@@ -46,6 +69,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .Cards {
